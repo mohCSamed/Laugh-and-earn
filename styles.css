@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Base Styles */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(41, 97%, 48%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(270, 49%, 37%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 9.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(41, 97%, 48%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(270, 49%, 37%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  direction: rtl;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(41, 97%, 45%);
+}
+
+/* Animations */
+@keyframes pointPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.point-pop {
+  animation: pointPop 0.5s ease;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: hsl(41, 97%, 45%);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+input, textarea {
+  background-color: var(--input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  font-family: 'Tajawal', sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* For RTL number display */
+.ltr-text {
+  direction: ltr;
+  display: inline-block;
+}
